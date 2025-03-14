@@ -1,4 +1,4 @@
-Insurance Fraud Detection
+## Insurance Fraud Detection
 This project uses machine learning to predict potentially fraudulent insurance claims by analyzing patterns in customer data, policy information, and claim details.
 Overview
 Insurance fraud is a significant challenge for insurance companies. This project demonstrates how various machine learning algorithms can be leveraged to identify potentially fraudulent claims, which can help insurance companies save costs and improve operational efficiency.
@@ -11,7 +11,7 @@ Incident information (date, type, severity, location)
 Claim details (injury claim, property claim, vehicle claim)
 The target variable: fraud_reported (Y/N)
 
-Methodology
+## Methodology
 The project follows a standard machine learning pipeline:
 
 Data Exploration and Preprocessing
@@ -22,13 +22,13 @@ Dropping unnecessary columns like policy_number, incident_location, etc.
 Removing multicollinear features (age and total_claim_amount)
 
 
-Feature Engineering
+## Feature Engineering
 
 Converting categorical features to numerical using one-hot encoding
 Scaling numerical features using StandardScaler
 
 
-Model Training and Evaluation
+## Model Training and Evaluation
 
 Splitting data into training (75%) and testing (25%) sets
 Training multiple classification algorithms:
@@ -49,14 +49,14 @@ Voting Classifier (ensemble of all models)
 
 
 
-Model Comparison
+## Model Comparison
 
 Evaluating models using accuracy, precision, recall, and F1-score
 Visualizing model performance for comparison
 
 
 
-Results
+## Results
 The best performing models were:
 
 Voting Classifier: 79.2% accuracy
@@ -64,7 +64,7 @@ Extra Trees Classifier: 78.4% accuracy
 Random Forest: 74.0% accuracy
 
 The Voting Classifier showed the best overall performance with a balance of precision (0.82 for non-fraud, 0.65 for fraud) and recall (0.91 for non-fraud, 0.45 for fraud).
-Requirements
+## Requirements
 
 Python 3.x
 pandas
@@ -77,17 +77,18 @@ lightgbm
 catboost
 plotly
 
-Usage
+## Usage
 
 Clone this repository
 Install required packages: pip install -r requirements.txt
 Run the Jupyter notebook: jupyter notebook InsuranceFraudDetection.ipynb
 Follow the step-by-step analysis and model training process
 
-Future Improvements
+## Future Improvements
 
 Feature importance analysis to identify the most influential predictors
 More extensive hyperparameter tuning for top-performing models
 Address class imbalance with techniques like SMOTE or class weighting
 Implement model explainability using SHAP or LIME
 Deploy the model as a web service for real-time prediction
+
